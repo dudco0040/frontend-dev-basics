@@ -16,11 +16,11 @@
  	DOM Tree의 각각의 요소
  */
  
-var el = document.getElementById('header-3'); // return이 객체임
+var el = document.getElementById('header-3'); // body가 파싱되기 전
 console.log("완료 전 : " + el);
 
 window.onload = function(){
-	var el = document.getElementById('header-3'); // return이 객체임
+	var el = document.getElementById('header-3'); // 함수로 정의되어서 
 	console.log("완료 후 : " + el);
 }
 

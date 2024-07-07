@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function(){
+	setTimeout(function(){
+		var imgElement = document.createElement('img');
+		imgElement.src = "https://i.namu.wiki/i/X-l3aX0Db2E0XHcGTNt1aTz8mrGdXtZ3ovj6EBNmwh49tHigxDwqwMJghtJCR9JKYwiR2Dwa1aPETl5Z9EqNxQ.webp";
+		imgElement.style.width="200px";
+		imgElement.alt = '메인 페이지 사진입니다. (*푸바오 사진)';
+		imgElement.title = "푸바오 사진.png";
+		
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>

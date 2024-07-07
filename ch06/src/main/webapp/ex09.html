@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function(){
+	setTimeout(function(){
+		var imgElement = document.createElement('img');
+		
+		imgElement.setAttribute('src', 'https://i.namu.wiki/i/X-l3aX0Db2E0XHcGTNt1aTz8mrGdXtZ3ovj6EBNmwh49tHigxDwqwMJghtJCR9JKYwiR2Dwa1aPETl5Z9EqNxQ.webp');
+		imgElement.setAttribute('style', 'width:200px');
+		imgElement.setAttribute('alt', '메인 페이지 사진입니다. (*푸바오 사진)');
+		imgElement.setAttribute('title', '푸바오 사진.png');
+		imgElement.setAttribute('no', 10);  // 비표준 속성을 사용할 때 data-  
+		
+		console.log(imgElement.no, imgElement.getAttribute('no'), imgElement.alt);
+		document.body.appendChild(imgElement);
+	}, 2000);
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
