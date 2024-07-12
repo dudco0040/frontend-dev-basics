@@ -29,49 +29,65 @@ body { font-family: "돋움", "맑은 고딕"; font-size: 12px; color: #333; mar
 	border: 8px solid #03C75A;
 } 
 
-.search-box a, .search-box input, .search-box button {  /* 하나의 block으로 묶어줌 - image 처리 */
-	display: block;
+.search-box a, .search-box input, .search-box button {
+	display: block;   /*각 태그를 block-lebel element로 지정 - 한 줄에 나타나도록 설정 */
+}
+
+.search-box a, .search-box input, .search-box .btn-search {
 	float: right;
+}
+
+.search-box a, .search-box input {
+	position: absolute;
 }
 
 .search-box input {
 	outline: none;
 	border: none;
-	width: 390px;
+	width: 340px;
 	height: 30px;
 	padding: 10px 5px;
 	font-size: 16px;
 	font-weight: bold;
+	z-index: 5;
 }
 
 #keyboard {
-	position: absolute;
 	right: 80px;
 	font-size:0;
 	width: 20px;
 	height: 12px;
 	margin-top: 2px;
 	background: url('/ch03/images/n-splite.png') no-repeat -398px -267px / 442px 428px; 
+	z-index: 10;
 }
 
 #dropdown {
-	position: absolute;
 	font-size:0;
 	right: 60px;
 	width: 10px;
 	height: 5px;
 	margin-top: 5px;
-	background: url('/ch03/images/n-splite.png') no-repeat -158px -151px / 442px 428px;	
+	background: url('/ch03/images/n-splite.png') no-repeat -158px -151px / 442px 428px;
+	z-index: 10;
+}
+
+.search-box .btn-search {
+	width: 50px; 
+	height: 50px;
+	background-color: #19ce60;
+	cursor: pointer;
 }
 
 button {
-	position: absolute;
-	right: 0px;
+	right: 10px;
+	bottom: 10px;
 	border: none;
 	font-size:0;
-	width: 50px;
-	height: 50px;
-	background: #19ce60 url('/ch03/images/n-splite.png') no-repeat -610px -25px / 650px 660px;
+	width: 35px;
+	height: 35px;
+	background: #19ce60 url('/ch03/images/n-splite.png') no-repeat -595px -30px / 630px 620px;
+	cursor: pointer;
 	}
 </style>
 </head>
@@ -80,7 +96,9 @@ button {
 	<div class="header">
 		<h1 class="logo">네이버</h1>
 		<div class="search-box">
-			<button>검색</button>
+			<div class="btn-search">
+				<button>검색</button>
+			</div>
 			<a href="" id='dropdown'>드롭다운</a>
 			<a href="" id='keyboard'>키보드</a>
 			<input type="text">

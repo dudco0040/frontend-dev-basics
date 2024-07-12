@@ -20,7 +20,7 @@ Array.prototype.insert = function(index, value){
         //     this.splice(index++, 0, 2);
         // });
 
-        value.forEach((e) => this.splice(index++, 0, e));
+        value.forEach((e) => this.splice(index++, 0, e));   // best! => 함수: 어휘상의 this를 일치시킴, 간략하고 가독성이 좋다. 
 
         // 해결방법 1
         // var _this = this;  // array
@@ -30,6 +30,7 @@ Array.prototype.insert = function(index, value){
         // });
 
         // 해결방법 2
+        
         
 
     } else {

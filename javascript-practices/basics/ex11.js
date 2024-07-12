@@ -37,7 +37,8 @@ console.log(fruits);
 // shift
 console.log("=== shift ===");
 
-var numbers1 = [1000, 3000, 2000, 5000, 4000, 8000];
+var num
+ers1 = [1000, 3000, 2000, 5000, 4000, 8000];
 var number = numbers1.shift();
 console.log(number, numbers1);
 

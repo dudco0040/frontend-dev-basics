@@ -74,15 +74,18 @@ $(function(){
 });
 */
 
+var slideshowTimer = null;
+
 $(function(){
 	$('#btn-slideshow').click(function(){
-		$(this).replaceWith("<button id='btn-stop'>슬라이드 종료</button>");
-		startSlideshow();
+		if(!slideshowTimer) { 
+			slideshowTimer = setInterval(changeImage, 2000);
+			$(this).text('슬라이드 종료');
+		} else {
+			clearInterval(slideshowTimer);
+			var slideshowTimer = null;
+		}
 		
-		$('#btn-stop').click(function(){
-			$(this).replaceWith("<button id='btn-slideshow'>슬라이드쇼 시작</button>");
-			stopSlideshow();
-		});
 	});
 });
 

@@ -47,10 +47,17 @@ var sum = function() {
     // }
 
     // 구현2 error
-    console.log(arguments instanceof(Array));
+    // console.log(arguments instanceof(Array));
+
     // arguments.forEach(function(e) {
     //    sum += e;
     // })
+    
+    // Array.prototype.forEach 직접 호출 + caller 로 바꾸기 
+    Array.prototype.forEach(arguments, function(e){
+        sum += e;
+    })
+
     return sum;
 }
 

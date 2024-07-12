@@ -7,7 +7,7 @@ var MyObject = function(name, age) {
     this.age = age;
 };
 
-MyObject.prototype.school = "biacademy";
+MyObject.prototype.school = "bitacademy";
 MyObject.prototype.course = "poscodx 8기";
 MyObject.prototype.info = function() {
     console.log(this.school + ":" + this.course);
